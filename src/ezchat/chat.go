@@ -20,7 +20,7 @@ import (
 	"github.com/ipfs/go-log/v2"
 )
 
-var logger = log.Logger("rendezvous")
+var logger = log.Logger("EZZC")
 
 func handleStream(stream network.Stream) {
 	logger.Info("Got a new stream!")
@@ -105,8 +105,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	logger.Info("Host created. We are:", host.ID())
-	logger.Info(host.Addrs())
+//	logger.Info("Host created. We are:", host.ID())
+//	logger.Info(host.Addrs())
 
 	// Set a function as stream handler. This function is called when a peer
 	// initiates a connection and starts a stream with this peer.
@@ -123,9 +123,9 @@ func main() {
 
 	// Bootstrap the DHT. In the default configuration, this spawns a Background
 	// thread that will refresh the peer table every five minutes.
-	logger.Debug("Bootstrapping the DHT")
+//	logger.Debug("Bootstrapping the DHT")
 	if err = kademliaDHT.Bootstrap(ctx); err != nil {
-		panic(err)
+//		panic(err)
 	}
 
 	// Let's connect to the bootstrap nodes first. They will tell us about the
@@ -137,9 +137,9 @@ func main() {
 		go func() {
 			defer wg.Done()
 			if err := host.Connect(ctx, *peerinfo); err != nil {
-				logger.Warning(err)
+//				logger.Warning(err)
 			} else {
-				logger.Info("Connection established with bootstrap node:", *peerinfo)
+//				logger.Info("Connection established with bootstrap node:", *peerinfo)
 			}
 		}()
 	}
@@ -157,7 +157,7 @@ func main() {
 	logger.Debug("Searching for other peers...")
 	peerChan, err := routingDiscovery.FindPeers(ctx, config.RendezvousString)
 	if err != nil {
-		panic(err)
+//		panic(err)
 	}
 
 	for peer := range peerChan {
@@ -170,7 +170,7 @@ func main() {
 		stream, err := host.NewStream(ctx, peer.ID, protocol.ID(config.ProtocolID))
 
 		if err != nil {
-			logger.Warning("Connection failed:", err)
+	//		logger.Warning("Connection failed:", err)
 			continue
 		} else {
 			rw := bufio.NewReadWriter(bufio.NewReader(stream), bufio.NewWriter(stream))
