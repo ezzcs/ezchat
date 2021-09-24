@@ -1,4 +1,6 @@
 # ezchat since 2021.09.01
+3 clean project and rebuild it.
+
 2 test it
 the git push test in local server.
 
