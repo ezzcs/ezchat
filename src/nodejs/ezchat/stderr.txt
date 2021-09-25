@@ -1,0 +1,15 @@
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'amqplib'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at RabbitMQSend (/home/ezzcs/work/ezchat/src/nodejs/lib/RabbitMQSend.js:3:13)
+    at writeData (/home/ezzcs/work/ezchat/src/nodejs/ezchat/Server.js:50:1)
+    at Socket.<anonymous> (/home/ezzcs/work/ezchat/src/nodejs/ezchat/Server.js:23:9)
+    at Socket.emit (events.js:198:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:265:13)
