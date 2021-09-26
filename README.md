@@ -7,6 +7,9 @@ cd ezzc
 npm run build
 npm run dev
 
+config/index.js
+host: '172.17.0.2',
+port: '8080',
 
 6 psql login
 export PGPASSWORD=mypassword
