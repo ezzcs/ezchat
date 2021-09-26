@@ -1,4 +1,38 @@
 # ezchat since 2021.09.01
+5 boot with local scripts
+5-1
+create /etc/rc.local
+the head
+#!/bin/sh
+
+5-2
+chmod +x /etc/rc.local
+
+5-3
+create /lib/systemd/system/rc-local.service
+
+[Unit]
+Description=/etc/rc.local Compatibility
+Documentation=man:ywinit(8)
+ConditionFileIsExecutable=/etc/rc.local
+
+[Service]
+ExecStart=/etc/rc.local start
+Type=forking
+TimeoutSec=0
+RemainAfterExit=yes
+CuessMainPID=0
+
+[Install]
+WantedBy=multi-user.target
+Alias=rc-local.service
+
+5-4 
+ln -s /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.service
+
+5-5
+systemctl enable rc-local.service
+
 
 4 install rabbitmq
 sudo apt install -y rabbitmq-server
