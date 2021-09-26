@@ -1,4 +1,13 @@
 # ezchat since 2021.09.01
+
+7 vue-cli install
+npm install vue-cli -g
+vue init webpack ezzc
+cd ezzc
+npm run build
+npm run dev
+
+
 6 psql login
 export PGPASSWORD=mypassword
 
