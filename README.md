@@ -1,4 +1,8 @@
 # ezchat since 2021.09.01
+6 psql login
+export PGPASSWORD=mypassword
+
+
 5 boot with local scripts
 5-1
 create /etc/rc.local
