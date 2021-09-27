@@ -1,4 +1,5 @@
 # ezchat since 2021.09.01
+8
 
 7 vue-cli install
 npm install vue-cli -g
