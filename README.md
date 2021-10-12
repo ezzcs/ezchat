@@ -1,4 +1,10 @@
 # ezchat since 2021.09.01
+9 report
+soffice -invisible -headless -nofirststartwizard "-accept=socket,host=localhost,port=2002;urp;"
+
+
+
+
 8 test vue-cli functions
 
 7 vue-cli install
