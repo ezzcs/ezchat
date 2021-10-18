@@ -1,4 +1,13 @@
 # ezchat since 2021.09.01
+
+10 spark
+val bible = sc.textFile("./data/bible1.txt")
+
+val topWordCount = bible.flatMap(str=>str.split(" ")). filter(!_.isEmpty).map(word=>(word,1)).reduceByKey(_+_).map{case (word, count) => (count, word)}.sortByKey(false)
+
+topWordCount.take(100).foreach(x=>println(x))
+
+
 9 report
 soffice -invisible -headless -nofirststartwizard "-accept=socket,host=localhost,port=2002;urp;"
 
