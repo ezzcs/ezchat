@@ -7,6 +7,16 @@ val topWordCount = bible.flatMap(str=>str.split(" ")). filter(!_.isEmpty).map(wo
 
 topWordCount.take(100).foreach(x=>println(x))
 
+random sample:
+val rdd = sc.makeRDD(Array("hello1","hello2","hello3","world1","world2","world3"))
+ rdd.sample(false,0.3).foreach(println)
+
+foreach sample:
+data.map(x=>{"head"+x}).foreach(println)
+
+val dm = data.filter(x=>x.contains("Lord"))
+dm.foreach(println)
+
 
 9 report
 soffice -invisible -headless -nofirststartwizard "-accept=socket,host=localhost,port=2002;urp;"
