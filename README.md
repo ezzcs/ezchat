@@ -1,4 +1,10 @@
 # ezchat since 2021.09.01
+11
+ezreport
+
+sudo apt install libreoffice
+cp /usr/share/fonts  /usr/share/fontconfig
+
 
 10 spark
 val bible = sc.textFile("./data/bible1.txt")

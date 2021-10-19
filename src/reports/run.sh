@@ -1,1 +1,1 @@
-python3 test.py
+node createReport.js
