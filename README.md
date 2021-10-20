@@ -1,4 +1,9 @@
 # ezchat since 2021.09.01
+12 test map reduce
+scala> val list:List[Int] = List(1,2,3,4,5,7)
+scala> println(list.map(x=>x+1).filter{x=>x>1}.reduce(_+_))
+result 20
+
 11
 ezreport
 
