@@ -1,4 +1,26 @@
 # ezchat since 2021.09.01
+
+14 scala spark sort
+
+var data = sc.textFile("data/bible.txt")
+val splitdata = data.flatMap(line=>line.split(" "))
+splitdata.collect
+
+显示
+splitdata.foreach(x=>println(x))
+
+降序
+splitdata.map((_,1)).reduceByKey(_+_).sortBy(_._2,false).collect
+升序
+splitdata.map((_,1)).reduceByKey(_+_).sortBy(_._2).collect
+
+
+13 pyspark
+>>>
+spark.sparkContext._conf.getAll()
+sc.getConf().getAll()
+
+
 12 test map reduce
 scala> val list:List[Int] = List(1,2,3,4,5,7)
 scala> println(list.map(x=>x+1).filter{x=>x>1}.reduce(_+_))

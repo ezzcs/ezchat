@@ -1,2 +1,2 @@
-python3 wordCount.py  ~/data/bible.txt 
+python3 findKeyWord.py  ~/data/bible.txt 
 

@@ -1,0 +1,16 @@
+from operator import add
+from pyspark import SparkContext
+import json
+import hashlib
+import re
+
+from operator import add
+from pyspark import SparkContext
+sc = SparkContext("local[4]","workdjoy")
+lines = sc.textFile("file:/hl/users/ezzcs/data/SearchDataFile/*")
+
+wc = lines.flatMap(lambda x:re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',str(x))
+        ).map(lambda x:(x,1)
+                        ).reduceByKey(add)
+for(word,count)in wc.collect():
+        print("%s: %i"%(word,count))
