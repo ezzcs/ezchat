@@ -1,8 +1,23 @@
 # ezchat since 2021.09.01
+16 hadoop cmd
+hadoop dfs -mkdir 
+hadoop fs -lsr 
+hadoop fs -put 
+hadoop fs -rm
+hadoop fs -rm-r
+hadoop fs -chmod
+hadoop fs -chmod -rw
+hadoop fs -chmod +rwxrwxrwx /ezzcs/spark
+
+15 install hadoop
+
+ssh-keygen -t rsa
+
+ssh-copy-id ezzcs@s1 
 
 14 scala spark sort
-
-var data = sc.textFile("data/bible.txt")
+val data = sc.textFile("hdfs://localhost:6120/ezzcs/spark/test")
+val data = sc.textFile("data/bible.txt")
 val splitdata = data.flatMap(line=>line.split(" "))
 splitdata.collect
 

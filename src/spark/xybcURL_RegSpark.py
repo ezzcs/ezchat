@@ -13,4 +13,5 @@ wc = lines.flatMap(lambda x:re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|
         ).map(lambda x:(x,1)
                         ).reduceByKey(add)
 for(word,count)in wc.collect():
-        print("%s: %i"%(word,count))
+#        print("%s: %i"%(word,count))
+        print(word)
