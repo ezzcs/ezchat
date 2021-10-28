@@ -1,4 +1,6 @@
 # ezchat since 2021.09.01
+17 update github token
+
 16 hadoop cmd
 hadoop dfs -mkdir 
 hadoop fs -lsr 
