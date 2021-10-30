@@ -1,5 +1,16 @@
 # ezchat since 2021.09.01
+20 scala with mavn
+mvn archetype:generate -DarchetypeGroupId=net.alchim31.maven -DarchetypeArtifactId=scala-archetype-simple
+
+mvn package
+
+spark-submit target/*****-jar-with-dependencies.jar
+
+
 19 books
+with spark
+the gutenburg
+pyspark can't work.
 
 18 spark-nlp
 v 3.3.1
