@@ -1,4 +1,9 @@
 # ezchat since 2021.09.01
+
+
+21 spark witth sbt
+
+
 20 scala with mavn
 mvn archetype:generate -DarchetypeGroupId=net.alchim31.maven -DarchetypeArtifactId=scala-archetype-simple
 
