@@ -1,7 +1,10 @@
 # ezchat since 2021.09.01
 
 
-21 spark witth sbt
+21 spark map reduce 
+val list: List[Int]=List(1,2,3,4,5,6)
+rintln(list.map(x=>x+1).filter{x=>x>3}.reduce(_+_))
+
 
 
 20 scala with mavn
