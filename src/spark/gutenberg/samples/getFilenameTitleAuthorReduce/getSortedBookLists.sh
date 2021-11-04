@@ -1,1 +1,1 @@
-python3 trimFileSort.py > /home/spark/download/bookSortedLists.txt 
+python3 trimFileSort.py > /ezroot/download/bookSortedLists.txt 

@@ -14,7 +14,7 @@ for line in data:
         l2 = l1[1].split("Author:")
         ftitle = l2[0]
         fauthor = l2[1][:-2]
-        fnid = fname[3:-4]
+        fnid = fname[2:-4]
         if(fnid!=''):
             fniid = int(fnid)
             fileList.append(fniid)
@@ -24,7 +24,7 @@ for line in data:
 setList = set(fileList)
 mergedList = list(setList)
 mergedList.sort()
-i =0 
+i = 1 
 for bk in mergedList:
     print(str(i)+'['+str(bk)+']'+bookDict[bk])
     i = i + 1
