@@ -15,7 +15,7 @@ def Schedule(a,b,c):
     print('%.2f%%' % per)
 #    time.sleep(0.3)
 
-ezloop = 25718 
+ezloop = 33027
 while (ezloop<66631):
 
     url = 'https://www.gutenberg.org/cache/epub/'+str(ezloop)+'/pg'+str(ezloop)+'.txt'
