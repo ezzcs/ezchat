@@ -1,4 +1,6 @@
 # ezchat since 2021.09.01
+22 filter
+val fresult = data.filter(_.contains("keywords"))
 
 
 21 spark map reduce 
