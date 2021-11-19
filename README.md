@@ -1,4 +1,31 @@
 # ezchat since 2021.09.01
+25 words position
+
+val data = sc.textFile("/ezroot/download/BibleWordsNum.txt"
+val c1 = data.collect
+val c2 = c1.map(x=>(x+"."))
+val c3 = c2.map(x=>(x.split(",")(1),x.split(",")(0)))
+
+24 sequence
+
+def test(str:String,num:Int):Int={
+	var sum:Int = num+1
+	var msg:String = str.replaceAll("\\p{P}(?=\\s|$)", "")
+	print(sum+","+msg+"\n")
+	return sum
+}
+
+var i:Int = 0
+c1.foreach(x=>(x.foreach(y=>(i=test(y,i)))))
+
+23 去标点
+val books = sc.textFile("/ezroot/download/bible.txt")
+val words = books.map(x=>x.split(" "))
+val c1 = words.collect
+c1.foreach(x=>(x.foreach(y=>(print(y.replaceAll("\\p{P}(?=\\s|$)", ""))))))
+c1.foreach(x=>(x.foreach(y=>(print(y.replaceAll("\\p{P}(?=\\s|$)", "")+"\n")))))
+
+
 22 filter
 val fresult = data.filter(_.contains("keywords"))
 
