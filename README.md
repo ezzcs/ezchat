@@ -1,6 +1,9 @@
 # ezchat since 2021.09.01
 26 republish the result.
 Don't wast more time in valueless proejct. 
+import numpy.matlib 
+import numpy as np 
+print (np.matlib.empty((2,2)))
 
 25 words position
 
