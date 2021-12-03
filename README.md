@@ -1,4 +1,6 @@
 # ezchat since 2021.09.01
+26 
+
 25 words position
 
 val data = sc.textFile("/ezroot/download/BibleWordsNum.txt"
