@@ -1,5 +1,6 @@
 # ezchat since 2021.09.01
-26 
+26 republish the result.
+Don't wast more time in valueless proejct. 
 
 25 words position
 
