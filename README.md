@@ -1,4 +1,9 @@
 # ezchat since 2021.09.01
+27 create wallet
+docker pull sigp/lighthouse
+docker run -p 9000:9000 -p 127.0.0.1:5052:5052 sigp/lighthouse lighthouse beacon --http --http-address 0.0.0.0
+docker exec 982e92dc6a4f lighthouse account_manager wallet create --name "ezzcs"  --password-file "test.pass"
+
 26 republish the result.
 Don't wast more time in valueless proejct. 
 import numpy.matlib 
